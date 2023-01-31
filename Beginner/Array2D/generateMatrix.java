@@ -1,11 +1,16 @@
 package Beginner.Array2D;
 
 public class generateMatrix {
-    public class generateMatrix {
         public static void main(String[] args) {
             int A =5;
             int[][] answer = new int[A][A];
             answer = generatedMatrix(A);
+            for (int i=0;i<answer.length;i++){
+                System.out.println(answer[i][0]);
+                for(int j=0;j<answer.length;j++){
+                    System.out.println(answer[i][j]);
+                }
+            }
         }
         public static int[][] generatedMatrix(int A){
             int count =1;
@@ -50,4 +55,3 @@ public class generateMatrix {
             return answer;
         }
     }
-}
