@@ -16,13 +16,28 @@ public class SortStackInAscendingOrder {
         stackOrg.add(3);
         stackOrg.add(1);
         Stack<Integer> tmpStack = sortedStack(stackOrg);
+        while (!tmpStack.isEmpty()){
+            System.out.println(tmpStack.pop()+" ");
+        }
     }
 
     public static Stack<Integer> sortedStack(Stack<Integer> stackOrg){
+        Stack<Integer> auxStack = new Stack<>();
         while (!stackOrg.isEmpty()){
             int temp = stackOrg.pop();
-            if(temp >=)
+            while (!auxStack.isEmpty() && auxStack.peek() > temp){
+                int x = auxStack.peek();
+                auxStack.pop();
+                stackOrg.push(x);
+            }
+            auxStack.push(temp);
         }
+        while (!auxStack.isEmpty()){
+            int x = auxStack.peek();
+            auxStack.pop();
+            stackOrg.push(x);
+        }
+        return stackOrg;
     }
 
 }
