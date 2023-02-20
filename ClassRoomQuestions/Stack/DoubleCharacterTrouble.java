@@ -5,7 +5,8 @@ import java.util.Stack;
 public class DoubleCharacterTrouble {
     public static void main(String[] args) {
         String doubleCharacterString ="abccbc";
-        String answer = removeDoubleCharString(doubleCharacterString);
+        //String answer = removeDoubleCharString(doubleCharacterString);
+        String answer = anotherApproch(doubleCharacterString);
         System.out.println(answer);
     }
     public static String removeDoubleCharString(String givenString){
@@ -36,5 +37,20 @@ public class DoubleCharacterTrouble {
            ans +=String.valueOf(ca);
        }
        return ans;
+    }
+    public static String anotherApproch(String A){
+        Stack<Character> stack = new Stack<>();
+        for(int i=A.length() -1;i>=0;i--){
+            char c=A.charAt(i);
+            if(stack.size()==0 || stack.peek()!=c)
+                stack.push(c);
+            else
+                stack.pop();
+        }
+        StringBuilder sb=new StringBuilder();
+        while(stack.size()>0){
+            sb.append(stack.pop());
+        }
+        return sb.toString();
     }
 }
