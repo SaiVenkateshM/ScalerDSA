@@ -1,7 +1,15 @@
 package Advance.Stack;
 
 import java.util.Stack;
+/*
+An arithmetic expression is given by a string array A of size N. Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
+Valid operators are +, -, *, /. Each string may be an integer or an operator.
+Input 1:
+    A =   ["2", "1", "+", "3", "*"]
+Input 2:
+    A = ["4", "13", "5", "/", "+"]
+ */
 public class EvaluateExpression {
     public static void main(String[] args) {
         String[] A = {"5", "1", "2", "+", "4", "*", "+", "3", "-"};
