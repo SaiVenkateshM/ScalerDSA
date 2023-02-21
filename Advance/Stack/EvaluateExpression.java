@@ -28,7 +28,7 @@ public class EvaluateExpression {
             else if(A[i].equals("-")){
                 int a = stack.pop();
                 int b = stack.pop();
-                stack.push(a-b);
+                stack.push(b-a);
             }
             else if(A[i].equals("+")){
                 int a = stack.pop();
