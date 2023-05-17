@@ -1,5 +1,6 @@
 package Intermediate.Arrays;
 /*
+Discussed in class.
 Given an array of size N, and Q queries of the format s and e. Return sum of elements from index s to e.
  */
 public class Prefix_1 {
