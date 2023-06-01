@@ -18,14 +18,14 @@ public class AntiDiganols {
         int N = A.length;
         int[][] answer = new int[2*N-1][N];
 
-        for(int row=0;row<2*N-1;row++){
+        for(int row=0;row<2*N-1;row++){// first creating the desired matrix and filling it by 0.
             for(int col=0;col<N; col++){
                 answer[row][col] = 0;
             }
         }
-        int i=0; int j =0;
-        for(int col=0;col<N;col++){
-            int x=0;
+        int i=0; int j;// these variable are used for answer matrix to update
+        for(int col=0;col<N;col++){// we take col because for anti-diganol and digonal col will remain same and row will change.
+            int x=0; // x and y are used for the original matrix to retrieve the anti-digonal values.
             int y = col;
             j=0;
             while(x<N & y>=0){
@@ -48,6 +48,7 @@ public class AntiDiganols {
             }
             i++;
         }
+        //used only to print the matrix.
         for(int row =0;row<2*N-1;row++){
             for(int col=0;col<N;col++){
                 System.out.print(answer[row][col]);
