@@ -30,8 +30,8 @@ public class AntiDiganols {
             j=0;
             while(x<N & y>=0){
                 answer[i][j] = A[x][y];
-                x++;
-                y--;
+                x++;// x is increasing in anti digonal hence condition is check to be less than N
+                y--; // y will be decreasing hence it should be equal for greater than 0
                 j++;
             }
             i++;
